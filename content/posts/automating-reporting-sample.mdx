@@ -1,0 +1,29 @@
+---
+title: "Sample draft: a checklist for automating a recurring report"
+date: "2026-11-01"
+summary: "A starter outline you can rewrite in your own words and experience."
+tags: ["Automation", "Reporting"]
+draft: false
+---
+
+This is a **sample draft** showing how a technical post looks on the site, including code blocks. Rewrite it using your own experience.
+
+## A simple checklist
+
+1. Write down the manual steps exactly as they happen today.
+2. Move the data pull into a reusable SQL query.
+3. Do the cleaning and validation in a script, so results are reproducible.
+4. Schedule the refresh and send the output where people already look.
+5. Document the process so a teammate can run it without you.
+
+## Example: a reusable query
+
+```sql
+SELECT school_id,
+       COUNT(*)                        AS students_tested,
+       SUM(CASE WHEN completed = 1 THEN 1 ELSE 0 END) AS completed
+FROM   assessment_results
+GROUP  BY school_id;
+```
+
+Small, documented building blocks like this are what make larger automation reliable.
