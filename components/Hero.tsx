@@ -44,9 +44,6 @@ export default function Hero() {
             <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <Linkedin size={22} />
             </a>
-            <a href={`mailto:${site.email}`} aria-label="Email">
-              <Mail size={22} />
-            </a>
           </div>
         </Reveal>
 

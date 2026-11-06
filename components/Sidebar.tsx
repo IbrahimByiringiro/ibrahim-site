@@ -115,9 +115,6 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
         <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-accent dark:hover:text-accent-dark">
           <Linkedin size={18} />
         </a>
-        <a href={`mailto:${site.email}`} aria-label="Email" className="hover:text-accent dark:hover:text-accent-dark">
-          <Mail size={18} />
-        </a>
       </div>
     </div>
   );

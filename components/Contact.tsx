@@ -48,7 +48,6 @@ export default function Contact() {
 
   const rows = [
     { icon: MapPin, label: site.location, href: undefined },
-    { icon: Mail, label: site.email, href: `mailto:${site.email}` },
     { icon: Linkedin, label: "LinkedIn", href: site.linkedin },
     { icon: Github, label: "GitHub", href: site.github },
   ];
