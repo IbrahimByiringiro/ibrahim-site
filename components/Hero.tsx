@@ -15,10 +15,25 @@ export default function Hero() {
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 px-6 pb-16 pt-28 sm:px-10 md:grid-cols-[1.1fr_1fr] lg:pt-16">
         <Reveal>
-          <p className="font-display text-xl font-medium text-accent dark:text-accent-dark">Hello, I am</p>
-          <h1 className="mt-3 font-display text-5xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl">
-            {site.name}
-          </h1>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="font-display text-xl font-medium text-accent dark:text-accent-dark">Hello, I am</p>
+              <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-slate-900 dark:text-white min-[380px]:text-5xl sm:text-6xl">
+                {site.name}
+              </h1>
+            </div>
+            {/* Small portrait, phones only (the large one below is hidden on phones) */}
+            <div className="relative mt-1 h-20 w-20 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-accent to-slate-900 shadow-lg ring-1 ring-accent/40 min-[380px]:h-24 min-[380px]:w-24 md:hidden dark:from-panel dark:to-black dark:ring-accent-dark/40">
+              <Image
+                src="/img/Prof%20landing%20page.png"
+                alt={site.name}
+                fill
+                sizes="6rem"
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+          </div>
           <p className="mt-6 min-h-[2rem] font-display text-xl font-semibold text-slate-900 dark:text-white">
             <Typewriter words={site.roles} />
           </p>
@@ -47,7 +62,7 @@ export default function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.15} className="relative mx-auto w-full max-w-md">
+         <Reveal delay={0.15} className="relative mx-auto hidden w-full max-w-md md:block">
           {/* Photo file: public/img/Prof landing page.png (spaces are written as %20 in the path) */}
           <div className="relative aspect-square w-full overflow-hidden rounded-full bg-gradient-to-br from-accent to-slate-900 shadow-2xl ring-1 ring-accent/30 dark:from-panel dark:to-black dark:ring-accent-dark/30">
             <Image
