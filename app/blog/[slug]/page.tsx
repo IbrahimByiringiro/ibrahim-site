@@ -5,14 +5,16 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { ArrowLeft } from "lucide-react";
 import { formatDate, getAllPosts, getPost } from "@/lib/posts";
 import VideoLink from "@/components/VideoLink";
-type Props = { params: { slug: string } };
+
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const post = getPost(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPost(slug);
   if (!post) return {};
   return {
     title: post.meta.title,
@@ -21,8 +23,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function PostPage({ params }: Props) {
-  const post = getPost(params.slug);
+export default async function PostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = getPost(slug);
   if (!post) notFound();
 
   return (
