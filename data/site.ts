@@ -49,6 +49,22 @@ export type Job = {
 };
 
 export const experience: Job[] = [
+    {
+    title: "Consultant & Freelancer",
+    org: "Personal Projects & Clients",
+    place: "Since 2016",
+    short: "IB",
+    type: "Part time: Technical & Training",
+    dates: "I Help My Clients Achieve The Following:",
+    tags: ["Capacity Building","System & Process Improvement", "SQL", "R", "STATA", "AppsScript", "PowerBI", "Looker Studio", "Excel", "Snowflake", "BigQuery", "DBeaver"],
+    bullets: [
+      "Make smarter decisions with clear insights, interactive dashboards, and performance tracking.",
+      "Save time and reduce costs by automating repetitive tasks, data processing, and reporting.",
+      "Turn data into reliable evidence through statistical analysis, surveys, and research.",
+      "Improve data quality and security with better data management, validation, and privacy practices.",
+      "Empower your team with customized training, practical tools, and ongoing technical support.",
+    ],
+  },
   {
     title: "Research & Data Analyst",
     org: "City Of Boston, BPS - Office of Data & Accountability",
@@ -66,7 +82,7 @@ export const experience: Job[] = [
   },
   {
     title: "Statistical Consultant/Resource Person",
-    org: "United Nations Statistics Division (UNSD) & The Partnership in Statistics for Development in the 21st Century (PARIS21) by OECD & UN",
+    org: "United Nations Statistics Division (UNSD) & Partnership in Statistics for Development in the 21st Century (PARIS21) by OECD & UN",
     place: "Rwanda, Uganda, Tanzania, Ethiopia, Jordan, Philippines",
     short: "UN",
     type: "Part-time: Consulting & Training",
@@ -85,7 +101,7 @@ export const experience: Job[] = [
     place: "Kigali, Rwanda",
     short: "NISR",
     type: "Full time: Leadership",
-    dates: "2018 – 2019 (2 years)",
+    dates: "2014 – 2019 (5 years)",
     tags: ["Project Management", "Povery Survey", "Survey methodology", "KPI frameworks", "Team leadership", "R", "STATA"],
     bullets: [
       "Directed statistical methodology, research and publications supporting national surveys and evidence-based policymaking.",
@@ -96,20 +112,7 @@ export const experience: Job[] = [
       "Led technical coordination & supervision of the third Rwanda [National Strategy for the Development of Statistics (NSDS III) 2018-2024](https://statistics.gov.rw/sites/default/files/documents/2025-02/NSDS3_Rwanda_Document_September2019.pdf), which is a strategic document that guides the development of statistics in Rwanda.",
     ],
   },
-  {
-    title: "Team Leader Statistician",
-    org: "National Institute of Statistics of Rwanda",
-    place: "Kigali, Rwanda",
-    short: "NISR",
-    type: "Full time: Lead technician",
-    dates: "2014 – 2017 (3 years)",
-    tags: ["Sampling design", "Demographic data", "Publications", "R", "STATA"],
-    bullets: [
-      "Analyzed large-scale demographic, economic and social datasets.",
-      "Supported survey methodology, sampling design, data processing and publication of official statistics.",
-      "Collaborated with government institutions and international partners to improve standards and data quality.",
-    ],
-  },
+
 ];
 
 export const skillGroups = [
