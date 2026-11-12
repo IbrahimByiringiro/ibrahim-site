@@ -26,7 +26,7 @@ export const about = {
   heading: "Get To Know Me",
   paragraphs: [
     "I'm a father of two sons and a data enthusiast with 15+ years of experience applying statistics, data science and quantitative research to complex problems in business, education, government and international development.",
-    "I've led research and data modernization initiatives, built automated reporting systems and interactive dashboards, and led teams of statisticians and analysts. I enjoy pairing deep methodological rigor with hands-on tooling: SQL, R, Python, Stata, Google AppScript and BigData tools (the Apaches,TensorFlow, etc).",
+    "I've led research and data modernization initiatives, built automated reporting systems and interactive dashboards, and led teams of statisticians and analysts. I enjoy pairing deep methodological rigor with hands-on tooling such asSQL, R, Python, Stata, Google AppScript and BigData tools (the Apaches,TensorFlow, etc).",
     "Outside of data, I enjoy spending time with my family and friends, volunteering, running, playing basketball and soccer, and exploring the outdoors.",
   ],
   stats: [
@@ -163,10 +163,10 @@ export const certifications = [
 ];
 
 export const languages = [
-  { name: "English", level: "Native Language" },
-  { name: "Kinyarwanda", level: "Fluent" },
+  { name: "English", level: "Fluent" },
   { name: "French", level: "Moderate" },
   { name: "Swahili", level: "Moderate" },
+  { name: "Kinyarwanda", level: "Native Speaker" },
 ];
 
 export const navLinks = [
