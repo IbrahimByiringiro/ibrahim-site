@@ -35,7 +35,7 @@ export default function Hero() {
             </div>
           </div>
           <p className="mt-6 min-h-[2rem] font-display text-xl font-semibold text-slate-900 dark:text-white">
-            <Typewriter words={site.roles} />
+           Father of 2 sons and <Typewriter words={site.roles} prefix={false} />
           </p>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             {site.tagline}

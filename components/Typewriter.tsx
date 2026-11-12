@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 // Types out each phrase, pauses, deletes it, then moves to the next.
-export default function Typewriter({ words }: { words: string[] }) {
+export default function Typewriter({ words, prefix = true }: { words: string[]; prefix?: boolean }) {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("");
   const [deleting, setDeleting] = useState(false);
@@ -35,9 +35,9 @@ export default function Typewriter({ words }: { words: string[] }) {
   }, [text, deleting, full, words]);
 
   return (
-    <span aria-label={`I'm ${words.join(", ")}`}>
+    <span aria-label={`${prefix ? "I'm" : ""}${words.join(", ")}`}>
       <span aria-hidden>
-        I&apos;m {article} {text}
+        {prefix && <>I&apos;m </>}{article} {text}
         <span className="ml-0.5 inline-block h-[1em] w-[2px] animate-pulse bg-current align-middle" />
       </span>
     </span>

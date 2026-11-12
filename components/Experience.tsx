@@ -2,6 +2,25 @@ import { experience } from "@/data/site";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
+// Turns "[text](https://link)" inside a bullet into a clickable link.
+function renderBullet(text: string) {
+  return text.split(/(\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!m) return part;
+    return (
+      <a
+        key={i}
+        href={m[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent dark:text-accent-dark"
+      >
+        {m[1]}
+      </a>
+    );
+  });
+}
+
 export default function Experience() {
   return (
     <section id="experience">
@@ -36,7 +55,7 @@ export default function Experience() {
 
                   <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-slate-600 marker:text-slate-400 dark:text-slate-400">
                     {job.bullets.map((b) => (
-                      <li key={b}>{b}</li>
+                      <li key={b}>{renderBullet(b)}</li>
                     ))}
                   </ul>
 
