@@ -13,7 +13,7 @@ export default function BlogIndex() {
   return (
     <div className="mx-auto max-w-3xl px-5 pb-24 pt-24 lg:pt-16 sm:px-8">
       <p className="eyebrow">Blog</p>
-      <h1 className="section-title mt-2">Notes on data, statistics & automation</h1>
+      <h1 className="section-title mt-2"> Articles & Perspectives</h1>
 
       {posts.length === 0 ? (
         <p className="mt-10 text-slate-500">No posts yet. Add an .mdx file to content/posts.</p>
