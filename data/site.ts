@@ -16,7 +16,7 @@ export const site = {
   // TODO: replace with your real profile URLs (the resume only shows "Link")
   linkedin: "https://www.linkedin.com/in/ibrahim-byiringiro",
   github: "https://github.com/IbrahimByiringiro",
-  resume: "https://github.com/IbrahimByiringiro/Ibrahim-Byiringiro---Curriculum-Vitae/blob/main/Ibrahim_Byiringiro_CV.pdf",
+  resume: "https://ibrahimbyiringiro.github.io/Ibrahim-Byiringiro---Curriculum-Vitae/Ibrahim_Byiringiro_CV.pdf",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   description:
     "Personal website of Ibrahim Byiringiro: senior data analyst, statistician and data scientist in Boston. Portfolio, resume and blog.",
