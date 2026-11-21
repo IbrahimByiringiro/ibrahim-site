@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, FileText, Github, Linkedin, Mail } from "lucide-react";
 import { site } from "@/data/site";
 import Reveal from "./Reveal";
 import Typewriter from "./Typewriter";
@@ -42,8 +42,8 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
-            <a href={site.resume} download className="group btn btn-primary">
-              <Download size={16} /> Download Resume
+            <a href={site.resume} target="_blank" rel="noopener noreferrer" className="group btn btn-primary">
+              <FileText size={16} /> View Curriculum-Vitae
             </a>
             <a href="#contact" className="group btn btn-outline">
               Get in touch
